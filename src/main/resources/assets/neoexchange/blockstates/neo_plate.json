@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "neoexchange:block/neo_plate"
+    }
+  }
+}

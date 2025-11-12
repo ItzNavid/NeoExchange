@@ -1,5 +1,6 @@
 package com.badiei.neoexchange;
 
+import com.badiei.neoexchange.blocks.NeoBlocks;
 import com.badiei.neoexchange.items.NeoItems;
 import org.slf4j.Logger;
 
@@ -40,6 +41,7 @@ public class NeoExchange {
         NeoForge.EVENT_BUS.register(this);
 
         NeoItems.register(modEventBus);
+        NeoBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -56,7 +58,9 @@ public class NeoExchange {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(NeoItems.NEO_STONE);
-            event.accept(NeoItems.NEO_PLATE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(NeoBlocks.NEO_PLATE);
         }
     }
 
