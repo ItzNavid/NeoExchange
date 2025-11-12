@@ -1,5 +1,7 @@
 {
   "item.neoexchange.neo_stone": "Neo Stone",
 
-  "block.neoexchange.neo_plate": "Neo Plate"
+  "block.neoexchange.neo_plate": "Neo Plate",
+
+  "creativetab.neoexchange.neo_tab": "Neo Tab"
 }

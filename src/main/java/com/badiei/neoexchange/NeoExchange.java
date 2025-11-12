@@ -1,7 +1,9 @@
 package com.badiei.neoexchange;
 
+import com.badiei.neoexchange.NeoCreativeModeTabs;
 import com.badiei.neoexchange.blocks.NeoBlocks;
 import com.badiei.neoexchange.items.NeoItems;
+
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -39,6 +41,8 @@ public class NeoExchange {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        NeoCreativeModeTabs.register(modEventBus);
 
         NeoItems.register(modEventBus);
         NeoBlocks.register(modEventBus);

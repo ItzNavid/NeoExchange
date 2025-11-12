@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "neoexchange:neo_stone"
+  },
+  "pattern": [
+    "NNN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "neoexchange:neo_plate"
+  }
+}
