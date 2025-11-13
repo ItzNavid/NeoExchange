@@ -1,6 +1,60 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "gui_light": "front",
   "textures": {
-    "all": "neoexchange:block/neo_plate"
+    "particle": "neoexchange:block/neo_plate/neo_plate_top",
+    "all": "neoexchange:block/neo_plate/neo_plate_base",
+    "top": "neoexchange:block/neo_plate/neo_plate_top"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 3, 16],
+      "faces": {
+        "north": { "texture": "#all" },
+        "south": { "texture": "#all" },
+        "east": { "texture": "#all" },
+        "west": { "texture": "#all" },
+        "up": { "texture": "#top" },
+        "down": { "texture": "#all" }
+      }
+    }
+  ],
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [15, 0, 0],
+      "translation": [10, 0, -15],
+      "scale": [1, 1, 1]
+    },
+    "firstperson_lefthand": {
+      "rotation": [15, 0, 0],
+      "translation": [10, 0, -15],
+      "scale": [1, 1, 1]
+    },
+    "thirdperson_righthand": {
+      "rotation": [90, 0, 0],
+      "translation": [-9, 8.25, 6],
+      "scale": [1.75, 0.5, 0.5]
+    },
+    "gui": {
+      "rotation": [90, 0, 0],
+      "translation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "ground": {
+      "translation": [0, 2, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "head": {
+      "rotation": [-90, 0, 0],
+      "translation": [0, 0, -26.5],
+      "scale": [1, 4, 1]
+    },
+    "fixed": {
+      "rotation": [-90, 0, 0],
+      "translation": [0, 0, -14],
+      "scale": [2, 2, 2]
+    }
   }
 }

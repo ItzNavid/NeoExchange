@@ -2,8 +2,6 @@ package com.badiei.neoexchange.blocks;
 
 import com.badiei.neoexchange.NeoExchange;
 import com.badiei.neoexchange.items.NeoItems;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -12,14 +10,16 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class NeoBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(NeoExchange.MOD_ID);
 
     public static final DeferredBlock<Block> NEO_PLATE = registerBlock("neo_plate",
-            Block::new, (BlockBehaviour.Properties.of()
-                    .strength(2.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).lightLevel(state -> 2)));
+            NeoPlateTemplate::new, BlockBehaviour.Properties.of()
+                    .strength(2.0F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)
+                    .lightLevel(state -> 2));
 
     private static <B extends Block> DeferredBlock<B> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> blockFactory, BlockBehaviour.Properties blockProperties) {
         DeferredBlock<B> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);
