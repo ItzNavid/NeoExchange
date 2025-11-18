@@ -19,8 +19,16 @@ public class NeoCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(NeoItems.NEO_STONE.get()))
                     .title(Component.translatable("creativetab.neoexchange.neo_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        // Original items
                         output.accept(NeoItems.NEO_STONE);
                         output.accept(NeoBlocks.NEO_PLATE);
+                        
+                        // The five tier stones in order
+                        output.accept(NeoItems.COMMON_STONE);
+                        output.accept(NeoItems.UNCOMMON_STONE);
+                        output.accept(NeoItems.RARE_STONE);
+                        output.accept(NeoItems.EPIC_STONE);
+                        output.accept(NeoItems.LEGENDARY_STONE);
                     }).build());
 
     public static final Supplier<CreativeModeTab> NEO_TAB2 = CREATIVE_MODE_TAB.register("neo_tab2",
